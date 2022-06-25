@@ -1,0 +1,2 @@
+some_image.png animals people
+breaking.png people
