@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="dice" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller=".ProjectController">
+   <children>
+      <Label fx:id="Status" layoutX="470.0" layoutY="39.0" text="Status">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="South" layoutX="57.0" layoutY="57.0" mnemonicParsing="false" onAction="#southClick" text="South" />
+      <Button fx:id="East" layoutX="4.0" layoutY="57.0" mnemonicParsing="false" onAction="#eastClick" prefHeight="25.0" prefWidth="46.0" text="East" />
+      <Button layoutX="7.0" layoutY="86.0" mnemonicParsing="false" onAction="#clickBuyDexterity" text="Buy dexterity" />
+      <Button layoutX="195.0" layoutY="86.0" mnemonicParsing="false" onAction="#clickBuyIntelligence" text="Buy intelligence" />
+      <Button layoutX="102.0" layoutY="86.0" mnemonicParsing="false" onAction="#ClickBuyStrength" text="Buy Strength" />
+      <Button fx:id="West" layoutX="60.0" layoutY="29.0" mnemonicParsing="false" onAction="#westClick" text="West" />
+      <Button fx:id="North" layoutX="2.0" layoutY="27.0" mnemonicParsing="false" onAction="#northClick" text="North" />
+      <Button layoutX="193.0" layoutY="16.0" mnemonicParsing="false" onAction="#FightClick" prefHeight="6.0" prefWidth="52.0" text="fight" />
+      <Button layoutX="248.0" layoutY="16.0" mnemonicParsing="false" onAction="#runClick" text="run away" />
+      <Button layoutX="322.0" layoutY="16.0" mnemonicParsing="false" onAction="#sleepClick" prefHeight="25.0" prefWidth="64.0" text="sleep" />
+      <Button layoutX="392.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchClick" text="search gold" />
+      <CheckBox layoutX="113.0" layoutY="45.0" mnemonicParsing="false" onAction="#ClickInRoom" text="In room " />
+      <CheckBox layoutX="193.0" layoutY="45.0" mnemonicParsing="false" onAction="#clickMonsterHere" text="Monster is here" />
+      <Button layoutX="13.0" layoutY="317.0" mnemonicParsing="false" onAction="#clickStart" text="Start" textFill="#940a0afa" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
+      <TextField fx:id="textFieldStatus" layoutX="299.0" layoutY="73.0" prefHeight="39.0" prefWidth="294.0" promptText="textStatus" />
+      <Separator layoutX="2.0" layoutY="109.0" prefHeight="11.0" prefWidth="200.0" />
+      <Separator layoutX="197.0" layoutY="109.0" prefHeight="11.0" prefWidth="200.0" />
+      <Separator layoutX="398.0" layoutY="113.0" prefWidth="200.0" />
+      <TextField fx:id="hitPlayerlText" layoutX="85.0" layoutY="147.0" />
+      <TextField fx:id="strengthPlText" layoutX="85.0" layoutY="179.0" />
+      <TextField fx:id="dexterityPlText" layoutX="85.0" layoutY="213.0" />
+      <Label fx:id="hittedLevelLabel" layoutX="29.0" layoutY="151.0" text="Hit level" />
+      <Label fx:id="StrengthLabel" layoutX="27.0" layoutY="184.0" text="Strength" />
+      <Label fx:id="DexterityLabel" layoutX="26.0" layoutY="217.0" text="Dexterity" />
+      <Label fx:id="IntelligenceLabel" layoutX="12.0" layoutY="251.0" text="Intelligence" />
+      <Label fx:id="GoldLabel" layoutX="36.0" layoutY="289.0" text="Gold" />
+      <TextField fx:id="intellPlText" layoutX="85.0" layoutY="247.0" />
+      <TextField fx:id="goldPlText" layoutX="85.0" layoutY="285.0" />
+      <TextField fx:id="hitMonsterText" layoutX="397.0" layoutY="147.0" />
+      <TextField fx:id="strengthMonsterText" layoutX="397.0" layoutY="179.0" />
+      <TextField fx:id="sexterityMonsterText" layoutX="397.0" layoutY="213.0" />
+      <TextField fx:id="inlellMonsterText" layoutX="397.0" layoutY="256.0" />
+      <TextField fx:id="roll" layoutX="106.0" layoutY="362.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="diceField" layoutX="397.0" layoutY="361.0" onAction="#diceField" />
+      <Label fx:id="HitLevelMonsterLabel" layoutX="340.0" layoutY="151.0" text="HitLevel" />
+      <Label fx:id="strengthMonsterLabel" layoutX="339.0" layoutY="184.0" text="Strength" />
+      <Label fx:id="dexterityMonsterLabel" layoutX="338.0" layoutY="217.0" text="Dexterity" />
+      <Label fx:id="intelligenceMonsterLabel" layoutX="331.0" layoutY="260.0" text="Intelligence" />
+      <Label fx:id="Player" layoutX="110.0" layoutY="114.0" text="Player" textFill="#400638">
+         <font>
+            <Font name="Georgia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="Monster" layoutX="417.0" layoutY="112.0" text="Monster" textFill="#400638">
+         <font>
+            <Font name="Georgia Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="269.0" layoutY="117.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="11.0" />
+      <Label layoutX="38.0" layoutY="-1.0" prefHeight="25.0" prefWidth="64.0" text="rooms" textFill="#6e2f0ed1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="rollPlayer" layoutX="68.0" layoutY="361.0" mnemonicParsing="false" onAction="#clickRoll" text="roll" />
+      <Button fx:id="Dice" layoutX="328.0" layoutY="361.0" mnemonicParsing="false" onAction="#clickDicePl" text="dice" />
+   </children>
+</AnchorPane>
